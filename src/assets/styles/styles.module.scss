@@ -1,0 +1,333 @@
+.container {
+  margin-inline: 10px;
+}
+
+.tapBarMain {
+  max-width: 330px;
+  height: 70px;
+  background-image: url('../img/tapBar.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.navBar {
+  max-width: 330px;
+  padding-top: 16px;
+  margin: 0 auto;
+}
+
+.navList {
+  display: flex;
+  position: relative;
+  gap: 20px;
+  padding: 10px 15px;
+  -webkit-box-shadow: -1px -25px 35px -11px rgba(0,0,0,0.75);
+  -moz-box-shadow: -1px -25px 35px -11px rgba(0,0,0,0.75);
+  box-shadow: -1px -25px 35px -11px rgba(0,0,0,0.75);
+}
+
+.navItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #FFFFFF99;
+  text-decoration: none;
+}
+
+.activeNavItem {
+  color: #B364D8;
+}
+
+.navList a.active {
+  color: #B364D8; 
+}
+
+.mineButton {
+  position: absolute;
+  bottom: 10px;
+  display: flex;
+}
+
+.mine {
+  position: relative;
+  padding-top: 15px;
+  height: 85svh;
+  background-image: url('../img/MineBackground.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.enegry {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-image: url('../img/Energy.svg');
+  width: 130px;
+  height: 35px;
+}
+
+.enegryCounter {
+  font-family: 'pixelmix';
+  font-size: 12px;
+  margin-left: 3px;
+  margin-bottom: 2px;
+}
+
+.chest {
+  background-image: url('../img/chest.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+
+  &:active {
+    background-image: url('../img/chest-active.png');
+  }
+}
+
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.coinCounter {
+  padding-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.coinCounterContent {
+  display: flex;
+  gap: 10px;
+}
+
+.cointCounterText {
+  font-family: 'pixelmix';
+  font-size: 30px;
+  line-height: 30px;
+  color: #ffffff;
+}
+
+.clicker {
+  padding-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clickerButton {
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+.clickerImage {
+  pointer-events: none;
+}
+
+.clickNumber {
+  position: fixed;
+  font-size: 30px;
+  color: white;
+  pointer-events: none;
+  font-family: 'pixelmix';
+  transition: opacity 0.5s, transform 1s;
+  opacity: 0;
+}
+
+.clickNumber.active {
+  opacity: 1;
+  transform: translateY(-150px);
+}
+
+.clickNumber.active.fadeOut {
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+}
+
+.progressBarBlock {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 10px;
+  width: 330px;
+}
+
+.progressBar {
+  position: absolute;
+  top: 3px;
+  width: 100%;
+}
+
+.progressBarPosition {
+  position: relative;
+  height: 20px;
+  background-image: url('../img/progressBar.png');
+  background-repeat: no-repeat;
+}
+
+.progressBarFill {
+  position: relative;
+  height: 5px;
+  background: #B364D8;
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 7px;
+    width: calc(100% - 12px);
+    height: 6px;
+    background: #B364D8;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 7px;
+    width: calc(100% - 12px);
+    height: 6px;
+    background: #B364D8;
+  }
+}
+.league {
+  display: flex;
+  margin-bottom: 10px;
+  justify-content: space-between;
+}
+
+.leagueLink {
+  display: flex;
+  gap: 10px;
+  color: #FFFFFF99;
+  text-decoration: none;
+}
+
+.leagueCounter {
+  font-family: 'pixelmix';
+  color: #FFFFFF99;
+}
+
+.firstOpenBlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100svh;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 1;
+}
+
+.blurBlock {
+  padding-left:30px;
+  position: relative;
+  backdrop-filter: blur(5px);
+}
+
+.dialogWindow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-image: url('../img/DialogWindow.png');
+  background-repeat: no-repeat;
+  width: 330px;
+  height: 70px;
+}
+
+.cursor {
+  margin: 0 auto;
+  margin-bottom: 30px;
+  width: 60px;
+  height: 90px;
+  -webkit-animation: pulsate-fwd 0.5s ease-in-out infinite both;
+	        animation: pulsate-fwd 0.5s ease-in-out infinite both;
+}
+
+@-webkit-keyframes pulsate-fwd {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes pulsate-fwd {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+.chooseWayBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100svh;
+  font-family: 'pixelmix';
+  background-color: #090A17;
+}
+
+.chooseWayTitle {
+  color: #ffffff;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.chooseWayLinksBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.chooseLink {
+  display: flex;
+  align-items: center;
+  width: 330px;
+  height: 70px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.imgBackground {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  background-image: url('../img/link-background.png');
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
+  background-size: cover;
+}
+
+.chooseWayLinkName { 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 10px;
+  width: 70%;
+}
