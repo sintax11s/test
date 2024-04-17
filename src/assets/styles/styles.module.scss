@@ -55,6 +55,7 @@
   background-image: url('../img/MineBackground.png');
   background-repeat: no-repeat;
   background-size: cover;
+  overflow: hidden;
 }
 
 .enegry {
@@ -288,6 +289,7 @@
   height: 100svh;
   font-family: 'pixelmix';
   background-color: #090A17;
+  overflow: hidden;
 }
 
 .chooseWayTitle {
