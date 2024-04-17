@@ -1,5 +1,5 @@
 export function vibrate() {
-  if ('vibrate' in navigator) {
-    navigator.vibrate(100);
+  if (window.navigator.vibrate) {
+    window.navigator.vibrate(100);
   } 
 }
