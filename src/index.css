@@ -92,4 +92,5 @@ body {
   font-family: 'Pixel Sans Serif Condensed';
   font-weight: 400;
   background-color: #000000;
+  overflow: hidden;
 }
